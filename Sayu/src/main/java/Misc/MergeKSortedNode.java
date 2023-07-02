@@ -1,20 +1,10 @@
 package Misc;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class MergeKSortedNode {
-
-    static class Node {
-        int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
 
     public static void main(String[] args) {
         // 1,4,5],[1,3,4],[2,6
@@ -54,5 +44,14 @@ public class MergeKSortedNode {
         }
 
         return placeHolderNode.next;
+    }
+
+    static class Node {
+        int value;
+        Node next;
+
+        Node(int value) {
+            this.value = value;
+        }
     }
 }

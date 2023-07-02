@@ -2,40 +2,40 @@ package June.WeekOne;
 
 public class InvertBinaryTree {
 
-	static class Node {
-		int val;
-		Node left = null;
-		Node right = null;
+    public static void main(String[] args) {
+        Node root = new Node(1);
+        root.left = new Node(2);
+        invertTree(root);
+    }
 
-		Node(int val) {
-			this.val = val;
-		}
-	}
+    private static Node invertTree(Node root) {
+        invertNode(root);
+        return root;
+    }
 
-	public static void main(String[] args) {
-		Node root = new Node(1);
-		root.left = new Node(2);
-		invertTree(root);
-	}
+    private static void invertNode(Node root) {
+        if (root == null)
+            return;
 
-	private static Node invertTree(Node root) {
-		invertNode(root);
-		return root;
-	}
+        if (root.left == null && root.right == null)
+            return;
 
-	private static void invertNode(Node root) {
-		if (root == null)
-			return;
+        Node x = root.right;
+        root.right = root.left;
+        root.left = x;
 
-		if (root.left == null && root.right == null)
-			return;
+        invertNode(root.left);
+        invertNode(root.right);
+    }
 
-		Node x = root.right;
-		root.right = root.left;
-		root.left = x;
+    static class Node {
+        int val;
+        Node left = null;
+        Node right = null;
 
-		invertNode(root.left);
-		invertNode(root.right);
-	}
+        Node(int val) {
+            this.val = val;
+        }
+    }
 
 }

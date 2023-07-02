@@ -2,56 +2,56 @@ package April.WeekFive;
 
 public class isValidSequence {
 
-	public static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
+    public static void main(String[] args) {
 
-		TreeNode() {
-		}
+        int[] arr = {0, 0, 0, 1};
 
-		TreeNode(int val) {
-			this.val = val;
-		}
+        TreeNode root = new TreeNode(0);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(0);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(0);
+        root.right.left = new TreeNode(0);
+        root.right.right = new TreeNode(1);
 
-		TreeNode(int val, TreeNode left, TreeNode right) {
-			this.val = val;
-			this.left = left;
-			this.right = right;
-		}
-	}
+        System.out.println(isValidSequence_(root, arr));
 
-	public static void main(String[] args) {
+    }
 
-		int[] arr = { 0, 0, 0, 1 };
+    static public boolean isValidSequence_(TreeNode root, int[] arr) {
+        if (root == null)
+            return (arr.length == 0) ? true : false;
+        return dfs(root, arr, 0);
+    }
 
-		TreeNode root = new TreeNode(0);
-		root.left = new TreeNode(1);
-		root.right = new TreeNode(0);
-		root.left.left = new TreeNode(1);
-		root.left.right = new TreeNode(0);
-		root.right.left = new TreeNode(0);
-		root.right.right = new TreeNode(1);
+    static boolean dfs(TreeNode root, int[] arr, int index) {
+        if (arr[index] != root.val)
+            return false;
 
-		System.out.println(isValidSequence_(root, arr));
+        if (index == (arr.length - 1)) {
+            return (root.left == null && root.right == null);
+        }
 
-	}
+        return ((root.left != null && dfs(root.left, arr, index + 1))
+                || (root.right != null && dfs(root.right, arr, index + 1)));
+    }
 
-	static public boolean isValidSequence_(TreeNode root, int[] arr) {
-		if (root == null)
-			return (arr.length == 0) ? true : false;
-		return dfs(root, arr, 0);
-	}
+    public static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-	static boolean dfs(TreeNode root, int[] arr, int index) {
-		if (arr[index] != root.val)
-			return false;
+        TreeNode() {
+        }
 
-		if (index == (arr.length - 1)) {
-			return (root.left == null && root.right == null);
-		}
+        TreeNode(int val) {
+            this.val = val;
+        }
 
-		return ((root.left != null && dfs(root.left, arr, index + 1))
-				|| (root.right != null && dfs(root.right, arr, index + 1)));
-	}
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
 }

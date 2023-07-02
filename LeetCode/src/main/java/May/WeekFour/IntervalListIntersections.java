@@ -5,35 +5,35 @@ import java.util.List;
 
 public class IntervalListIntersections {
 
-	public static void main(String[] args) {
-		int[][] arrA = { { 0, 2 }, { 5, 10 }, { 13, 23 }, { 24, 25 } };
-		int[][] arrB = { { 1, 5 }, { 8, 12 }, { 15, 24 }, { 25, 26 } };
-		System.out.println(findInterPoint(arrA, arrB));
-	}
+    public static void main(String[] args) {
+        int[][] arrA = {{0, 2}, {5, 10}, {13, 23}, {24, 25}};
+        int[][] arrB = {{1, 5}, {8, 12}, {15, 24}, {25, 26}};
+        System.out.println(findInterPoint(arrA, arrB));
+    }
 
-	static int[][] findInterPoint(int[][] x, int[][] y) {
-		List<int[]> list = new ArrayList<int[]>();
-		int CounterA = 0;
-		int CounterB = 0;
-		while (CounterA < x.length && CounterB < y.length) {
-			int[] tR = { Math.max(x[CounterA][0], y[CounterB][0]), Math.min(x[CounterA][1], y[CounterB][1]) };
-			if (tR[0] <= tR[1]) {
-				list.add(tR);
-			}
-			if (x[CounterA][1] < y[CounterB][1]) {
-				CounterA++;
-			} else {
-				CounterB++;
-			}
-		}
-		int[][] result = new int[list.size()][0];
-		int i = 0;
-		for (int[] val : list) {
-			result[i] = val;
-			i++;
-		}
-		return result;
-	}
+    static int[][] findInterPoint(int[][] x, int[][] y) {
+        List<int[]> list = new ArrayList<int[]>();
+        int CounterA = 0;
+        int CounterB = 0;
+        while (CounterA < x.length && CounterB < y.length) {
+            int[] tR = {Math.max(x[CounterA][0], y[CounterB][0]), Math.min(x[CounterA][1], y[CounterB][1])};
+            if (tR[0] <= tR[1]) {
+                list.add(tR);
+            }
+            if (x[CounterA][1] < y[CounterB][1]) {
+                CounterA++;
+            } else {
+                CounterB++;
+            }
+        }
+        int[][] result = new int[list.size()][0];
+        int i = 0;
+        for (int[] val : list) {
+            result[i] = val;
+            i++;
+        }
+        return result;
+    }
 
 }
 

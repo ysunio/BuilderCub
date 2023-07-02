@@ -44,7 +44,7 @@ public class DetectAndRemoveLoop {
 		}
 
 		ListNode One = head;
-		ListNode Two = null;
+		ListNode Two;
 		while (true) {
 			Two = slow;
 			while (Two.next != slow && Two.next != One) {

@@ -2,6 +2,7 @@ package Array;
 
 public class PlusOne {
     final int[] digits;
+
     public PlusOne(int[] digits) {
         this.digits = digits;
     }

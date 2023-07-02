@@ -1,7 +1,5 @@
 package Multithreading;
 
-import javax.swing.plaf.TableHeaderUI;
-
 public class StringPool {
 
     public static void main(String[] args) throws InterruptedException {
@@ -30,11 +28,11 @@ public class StringPool {
     static class SharedProps {
         String field;
 
-        public void setField(String field) {
+        public SharedProps(String field) {
             this.field = field;
         }
 
-        public SharedProps(String field) {
+        public void setField(String field) {
             this.field = field;
         }
 

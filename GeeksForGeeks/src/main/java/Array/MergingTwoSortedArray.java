@@ -54,6 +54,20 @@ public class MergingTwoSortedArray {
 		MERGE_WITHOUT_EXTRA_SPACE(array1, array2);
 	}
 
+	// 1,5,9,10,15,20
+	// 2,3,8,13
+
+	// 1,5,9,10,13,15
+	// 2,3,8,20
+
+	// 1,5,8,9,10,13
+	// 2,3,15,20
+
+
+	// 1,2,3,5,8,9
+	// 10,13,15,20
+
+
 	public static int[] MERGE_WITHOUT_EXTRA_SPACE(int[] arr, int[] arr2) {
 		int a1Len = arr.length;
 		int a2Len = arr2.length;

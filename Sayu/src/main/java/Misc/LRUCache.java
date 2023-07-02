@@ -1,6 +1,6 @@
 package Misc;
 
-import java.util.*;
+import java.util.HashMap;
 
 class LRUCache {
     public static void main(String[] args) {
@@ -88,9 +88,8 @@ class LRUCache {
     }
 
     static class Cache {
-        private final int cacheCapacity;
         public final HashMap<Integer, Node> keyValue;
-
+        private final int cacheCapacity;
         private Node head;
         private Node tail;
 

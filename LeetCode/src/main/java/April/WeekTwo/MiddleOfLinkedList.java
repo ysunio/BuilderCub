@@ -2,28 +2,28 @@ package April.WeekTwo;
 
 public class MiddleOfLinkedList {
 
-	static class ListNode {
-		int data;
-		ListNode next = null;
+    public static void main(String[] args) {
 
-		public ListNode(int data) {
-			this.data = data;
-		}
+    }
 
-	}
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
 
-	public static void main(String[] args) {
-		
-	}
+    static class ListNode {
+        int data;
+        ListNode next = null;
 
-	public ListNode middleNode(ListNode head) {
-		ListNode slow = head;
-		ListNode fast = head;
-		while (fast != null && fast.next != null) {
-			slow = slow.next;
-			fast = fast.next.next;
-		}
-		return slow;
-	}
+        public ListNode(int data) {
+            this.data = data;
+        }
+
+    }
 
 }

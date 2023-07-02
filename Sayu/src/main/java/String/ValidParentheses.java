@@ -9,15 +9,31 @@ public class ValidParentheses {
 
     private static boolean isValid(String str) {
         Stack<Character> stack = new Stack<>();
-        for(char charValue : str.toCharArray()){
-            switch (charValue){
-                case '{': stack.push('{'); break;
-                case '(': stack.push('('); break;
-                case '[': stack.push('['); break;
-                case ']': if(stack.isEmpty() || stack.peek() != '[') return false; stack.pop(); break;
-                case '}': if(stack.isEmpty() || stack.peek() != '{') return false; stack.pop(); break;
-                case ')': if(stack.isEmpty() || stack.peek() != '(') return false; stack.pop(); break;
-                default: break;
+        for (char charValue : str.toCharArray()) {
+            switch (charValue) {
+                case '{':
+                    stack.push('{');
+                    break;
+                case '(':
+                    stack.push('(');
+                    break;
+                case '[':
+                    stack.push('[');
+                    break;
+                case ']':
+                    if (stack.isEmpty() || stack.peek() != '[') return false;
+                    stack.pop();
+                    break;
+                case '}':
+                    if (stack.isEmpty() || stack.peek() != '{') return false;
+                    stack.pop();
+                    break;
+                case ')':
+                    if (stack.isEmpty() || stack.peek() != '(') return false;
+                    stack.pop();
+                    break;
+                default:
+                    break;
             }
         }
         return stack.isEmpty();

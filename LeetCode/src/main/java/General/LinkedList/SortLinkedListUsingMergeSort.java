@@ -2,89 +2,89 @@ package General.LinkedList;
 
 public class SortLinkedListUsingMergeSort {
 
-	static class Node {
-		int data;
-		Node next = null;
+    public static void main(String[] args) {
 
-		Node(int data) {
-			this.data = data;
-		}
-	}
+        Node linkedList = getDummyLinkedList();
+        printLinkedList(linkedList);
+        System.out.println();
+        System.out.println();
+        System.out.println("Getting Sorted Linked List");
+        printLinkedList(getSortedLinkedList(linkedList));
+    }
 
-	public static void main(String[] args) {
+    static Node getSortedLinkedList(Node head) {
+        if (head == null || head.next == null)
+            return head;
 
-		Node linkedList = getDummyLinkedList();
-		printLinkedList(linkedList);
-		System.out.println();
-		System.out.println();
-		System.out.println("Getting Sorted Linked List");
-		printLinkedList(getSortedLinkedList(linkedList));
-	}
+        Node slow = head;
+        Node fast = head;
+        Node prev = null;
 
-	static Node getSortedLinkedList(Node head) {
-		if (head == null || head.next == null)
-			return head;
+        while (fast != null && fast.next != null) {
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
 
-		Node slow = head;
-		Node fast = head;
-		Node prev = null;
+        // UnBinding LinkedList
+        prev.next = null;
 
-		while (fast != null && fast.next != null) {
-			prev = slow;
-			slow = slow.next;
-			fast = fast.next.next;
-		}
+        Node leftLink = getSortedLinkedList(head);
+        Node rightLink = getSortedLinkedList(slow);
 
-		// UnBinding LinkedList
-		prev.next = null;
+        return MERGE(leftLink, rightLink);
+    }
 
-		Node leftLink = getSortedLinkedList(head);
-		Node rightLink = getSortedLinkedList(slow);
+    static Node MERGE(Node left, Node right) {
+        Node newNode = new Node(-1);
+        Node mergedNode = newNode;
 
-		return MERGE(leftLink, rightLink);
-	}
+        while (left != null && right != null) {
+            if (left.data < right.data) {
+                mergedNode.next = left;
+                left = left.next;
+            } else {
+                mergedNode.next = right;
+                right = right.next;
+            }
+            mergedNode = mergedNode.next;
+        }
 
-	static Node MERGE(Node left, Node right) {
-		Node newNode = new Node(-1);
-		Node mergedNode = newNode;
+        if (left != null) {
+            mergedNode.next = left;
+        }
+        if (right != null) {
+            mergedNode.next = right;
+        }
 
-		while (left != null && right != null) {
-			if (left.data < right.data) {
-				mergedNode.next = left;
-				left = left.next;
-			} else {
-				mergedNode.next = right;
-				right = right.next;
-			}
-			mergedNode = mergedNode.next;
-		}
+        return newNode.next;
+    }
 
-		if (left != null) {
-			mergedNode.next = left;
-		}
-		if (right != null) {
-			mergedNode.next = right;
-		}
+    static void printLinkedList(Node node) {
+        if (node == null)
+            return;
+        while (node != null) {
+            System.out.print("-> " + node.data);
+            node = node.next;
+        }
+    }
 
-		return newNode.next;
-	}
+    static Node getDummyLinkedList() {
+        Node head = new Node((int) (Math.random() * 100));
+        Node currentNode = head;
+        for (int i = 0; i < 9; i++) {
+            currentNode.next = new Node((int) (Math.random() * 100));
+            currentNode = currentNode.next;
+        }
+        return head;
+    }
 
-	static void printLinkedList(Node node) {
-		if (node == null)
-			return;
-		while (node != null) {
-			System.out.print("-> " + node.data);
-			node = node.next;
-		}
-	}
+    static class Node {
+        int data;
+        Node next = null;
 
-	static Node getDummyLinkedList() {
-		Node head = new Node((int) (Math.random() * 100));
-		Node currentNode = head;
-		for (int i = 0; i < 9; i++) {
-			currentNode.next = new Node((int) (Math.random() * 100));
-			currentNode = currentNode.next;
-		}
-		return head;
-	}
+        Node(int data) {
+            this.data = data;
+        }
+    }
 }

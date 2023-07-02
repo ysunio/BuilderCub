@@ -2,50 +2,50 @@ package August;
 
 public class PathIII {
 
-	static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
+    static int resCount = 0;
 
-		public TreeNode(int val) {
-			this.val = val;
-		}
-	}
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
+    }
 
-	}
+    private static void doForEach(TreeNode root, int finalSum) {
+        if (root == null)
+            return;
 
-	static int resCount = 0;
+        findPath(root, finalSum, root.val);
 
-	public int pathSum(TreeNode root, int sum) {
-		if (root == null)
-			return 0;
-		doForEach(root, sum);
-		return resCount;
-	}
+        doForEach(root.left, finalSum);
+        doForEach(root.right, finalSum);
+    }
 
-	private static void doForEach(TreeNode root, int finalSum) {
-		if (root == null)
-			return;
+    private static void findPath(TreeNode root, int finalSum, int curSum) {
+        if (curSum == finalSum)
+            resCount++;
 
-		findPath(root, finalSum, root.val);
+        if (root == null)
+            return;
 
-		doForEach(root.left, finalSum);
-		doForEach(root.right, finalSum);
-	}
+        if (root.left != null)
+            findPath(root.left, finalSum, curSum + root.left.val);
+        if (root.right != null)
+            findPath(root.right, finalSum, curSum + root.right.val);
+    }
 
-	private static void findPath(TreeNode root, int finalSum, int curSum) {
-		if (curSum == finalSum)
-			resCount++;
+    public int pathSum(TreeNode root, int sum) {
+        if (root == null)
+            return 0;
+        doForEach(root, sum);
+        return resCount;
+    }
 
-		if (root == null)
-			return;
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-		if (root.left != null)
-			findPath(root.left, finalSum, curSum + root.left.val);
-		if (root.right != null)
-			findPath(root.right, finalSum, curSum + root.right.val);
-	}
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
 
 }
