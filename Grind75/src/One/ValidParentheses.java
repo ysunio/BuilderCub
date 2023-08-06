@@ -3,9 +3,6 @@ package One;
 import java.util.Stack;
 
 public class ValidParentheses {
-    public static void main(String[] args) {
-
-    }
 
     private static boolean _isValidParentheses(String pattern){
         Stack<Character> stack = new Stack<>();
