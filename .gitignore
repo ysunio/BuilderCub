@@ -44,3 +44,5 @@ build-*.json
 #Avoid Local Builds
 .gradle/
 build
+
+*/production/
