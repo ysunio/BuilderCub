@@ -2,11 +2,7 @@ package One;
 
 public class BinarySearch {
 
-    public static void main(String[] args) {
-        System.out.println(bSearch(new int[]{1,2,3,4,5,12,20,30}, 30));
-    }
-
-    public static boolean bSearch(int[] arr, int target){
+    public boolean bSearch(int[] arr, int target){
         int start = 0;
         int end = arr.length - 1;
 
