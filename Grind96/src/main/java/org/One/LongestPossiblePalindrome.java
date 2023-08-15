@@ -1,4 +1,4 @@
-package One;
+package org.One;
 
 public class LongestPossiblePalindrome {
     public int longestPalindrome(String s) {

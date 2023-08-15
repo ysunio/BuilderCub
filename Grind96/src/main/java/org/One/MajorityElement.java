@@ -1,4 +1,4 @@
-package One;
+package org.One;
 
 public class MajorityElement {
     public int majorityElement(int[] nums) {

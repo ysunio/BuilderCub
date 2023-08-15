@@ -1,7 +1,6 @@
-package One;
+package org.One;
 
 public class BalancedBinaryTree {
-
     class TreeNode {
         int val;
         TreeNode left;
