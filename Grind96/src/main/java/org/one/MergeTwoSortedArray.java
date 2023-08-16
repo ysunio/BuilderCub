@@ -1,4 +1,4 @@
-package org.One;
+package org.one;
 
 public class MergeTwoSortedArray {
     class ListNode {

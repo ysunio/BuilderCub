@@ -1,4 +1,4 @@
-package org.One;
+package org.one;
 
 import java.util.HashMap;
 import java.util.Map;
