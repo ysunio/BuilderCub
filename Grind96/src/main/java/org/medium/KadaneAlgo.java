@@ -13,20 +13,7 @@ public class KadaneAlgo {
         return max;
     }
 
-    class Solution {
-        // public int maxSubArray(int[] nums) {
-        //     int max = Integer.MIN_VALUE;
-        //     int tSum = 0;
-        //     for(int num : nums){
-        //         tSum += num;
-        //         max = Math.max(max, tSum);
-        //         if(tSum < 0)
-        //             tSum = 0;
-        //     }
-        //     return max;
-        // }
-
-        public int maxSubArray(int[] nums) {
+        public int maxSubArray2(int[] nums) {
             return maxSubArray(nums, 0, nums.length - 1);
         }
 
@@ -50,6 +37,5 @@ public class KadaneAlgo {
 
             return Math.max(Math.max(maxSubArray(nums, l, mid - 1), maxSubArray(nums, mid + 1, r)),
                     rightSum + leftSum + nums[mid]);
-        }
     }
 }

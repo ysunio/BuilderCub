@@ -19,4 +19,11 @@ class KadaneAlgoTest {
         Assertions.assertEquals(-1, maxValue);
     }
 
+    @Test
+    void shouldReturnMaxValueNegativeWithDQ(){
+        KadaneAlgo kadaneAlgo = new KadaneAlgo();
+        int maxValue = kadaneAlgo.maxSubArray2(new int[]{-1});
+        Assertions.assertEquals(-1, maxValue);
+    }
+
 }
