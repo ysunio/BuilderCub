@@ -23,3 +23,6 @@ jobs:
 
       - name: Build Algoexpert
         run: cd Algoexpert && ./gradlew clean build
+
+      - name: Build LeetCode
+        run: cd LeetCode && ./gradlew clean build
