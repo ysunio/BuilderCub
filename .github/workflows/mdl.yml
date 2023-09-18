@@ -3,7 +3,7 @@ name: Markdown Lint for ReadMe
 on: [push, pull_request]
 
 jobs:
-  delivery:
+  mdl-readme:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
