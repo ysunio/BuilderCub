@@ -1,13 +1,11 @@
-##
-<b>Coding Questions and their Solutions</b>
+# Q&A 
 
-###
-Algoexpert
-###
-HackerRank
-###
-HackerEarth
-###
-Question Asked in Amazon
-###
-Leetcode
+## AWS
+### Lambda
+
+## Coding Questions and their Solutions
+
+## Algoexpert
+## HackerRank
+## HackerEarth
+## LeetCode
