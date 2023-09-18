@@ -1,5 +1,5 @@
 ##
-<b>Coding from Technical Round.</b>
+<b>Coding Questions and their Solutions</b>
 
 ###
 Algoexpert
