@@ -26,3 +26,6 @@ jobs:
 
       - name: Build LeetCode
         run: cd LeetCode && ./gradlew clean build
+
+      - name: Build Striver
+        run: cd Striver && ./gradlew clean build
