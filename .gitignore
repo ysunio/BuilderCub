@@ -46,3 +46,4 @@ build-*.json
 build
 
 */production/
+*/**/bin/
