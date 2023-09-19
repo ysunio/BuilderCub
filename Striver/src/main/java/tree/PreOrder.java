@@ -21,8 +21,8 @@ public class PreOrder {
         while (!callStack.isEmpty()) {
             TreeNode<Integer> currentRoot = callStack.pop();
             listOfNodes.add(currentRoot.value);
-            if (currentRoot.right != null) callStack.push(currentRoot.right);
-            if (currentRoot.left != null) callStack.push(currentRoot.left);
+            if (currentRoot.right != null) callStack.push(currentRoot.right); // Since this should be computed later
+            if (currentRoot.left != null) callStack.push(currentRoot.left);  // Since this should be computed first
         }
         return listOfNodes;
     }
