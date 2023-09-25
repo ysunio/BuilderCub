@@ -11,7 +11,7 @@ public class StringUtf {
 
     private static void wrapperClass() {
         AtomicInteger atomicInteger = new AtomicInteger(100);
-        Float wrapperFloat = new Float(500);
+        float wrapperFloat = 500F;
 
         System.out.println("Main :: " + atomicInteger + " && " + wrapperFloat);
         System.out.println();
