@@ -5,6 +5,7 @@ public class DifferenceString {
     public static void main(String[] args) {
         System.out.println(findTheDifference("abd", "abcd"));
         System.out.println(findTheDifferenceCheck("noy", "pony"));
+        StringBuilder s = new StringBuilder();
     }
 
     static char findTheDifferenceCheck(String s, String t) {
