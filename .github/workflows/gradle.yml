@@ -19,14 +19,26 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
 
-      - name: Build Sayu
+      - name: Build Sayu Module
         run: cd Sayu && ./gradlew clean build
 
-      - name: Build Algoexpert
+      - name: Build Algoexpert Module
         run: cd Algoexpert && ./gradlew clean build
 
-      - name: Build LeetCode
+      - name: Build LeetCode Module
         run: cd LeetCode && ./gradlew clean build
 
-      - name: Build Striver
+      - name: Build Striver Module
         run: cd Striver && ./gradlew clean build
+      
+      - name: Build Amazon Module
+        run: cd Amazon && ./gradlew clean build
+ 
+      - name: Build Grind96 Module
+        run: cd Grind96 && ./gradlew clean build
+ 
+      - name: Build GeeksForGeeks Module
+        run: cd GeeksForGeeks && ./gradlew clean build
+
+      - name: Build Interview Module
+        run: cd Interview && ./gradlew clean build
