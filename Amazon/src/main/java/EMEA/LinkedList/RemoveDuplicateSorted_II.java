@@ -59,7 +59,6 @@ public class RemoveDuplicateSorted_II {
             head = nextNode;
         }
 
-
         return rHolder.next;
     }
 
