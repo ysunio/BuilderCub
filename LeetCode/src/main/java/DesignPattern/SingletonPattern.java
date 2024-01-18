@@ -2,7 +2,7 @@ package DesignPattern;
 
 import java.util.Objects;
 
-public class SingletonDesign {
+public class SingletonPattern {
     class EagerSingleton{
         private final EagerSingleton eagerSingleton = new EagerSingleton();
         public EagerSingleton getInstance(){
