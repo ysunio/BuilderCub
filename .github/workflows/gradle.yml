@@ -22,12 +22,6 @@ jobs:
       - name: Echo Java Version
         run: java --version
 
-      - name: Build Sayu Module
-        run: cd Sayu && ./gradlew clean build
-
-      - name: Build Algoexpert Module
-        run: cd Algoexpert && ./gradlew clean build
-
       - name: Build LeetCode Module
         run: cd LeetCode && ./gradlew clean build
 
@@ -45,3 +39,9 @@ jobs:
 
       - name: Build Interview Module
         run: cd Interview && ./gradlew clean build
+
+      - name: Build Sayu Module
+        run: cd Sayu && ./gradlew clean build
+
+      - name: Build Algoexpert Module
+        run: cd Algoexpert && ./gradlew clean build
