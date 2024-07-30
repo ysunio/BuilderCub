@@ -1,5 +1,8 @@
 package Leetcode;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+
 public class ReverseLinkedListInKGroup {
 
     protected class ListNode {
