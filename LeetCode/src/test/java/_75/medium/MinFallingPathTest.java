@@ -1,5 +1,6 @@
 package _75.medium;
 
+import Archieve._75.medium.MinFallingPath;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

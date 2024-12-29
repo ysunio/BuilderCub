@@ -1,5 +1,6 @@
 package _75.easy;
 
+import Archieve._75.easy.MissingNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

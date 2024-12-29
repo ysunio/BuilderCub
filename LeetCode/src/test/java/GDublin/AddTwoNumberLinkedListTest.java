@@ -1,5 +1,5 @@
 package GDublin;
-import GDublin.common.ListNode;
+import GDublin._2025.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

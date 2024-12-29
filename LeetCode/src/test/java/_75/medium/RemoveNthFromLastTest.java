@@ -1,5 +1,6 @@
 package _75.medium;
 
+import Archieve._75.medium.RemoveNthFromLast;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

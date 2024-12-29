@@ -1,9 +1,7 @@
 package _75.easy;
 
+import Archieve._75.easy.KidsWithGreaterCandies;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
