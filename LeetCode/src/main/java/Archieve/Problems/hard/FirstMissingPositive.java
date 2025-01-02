@@ -2,7 +2,7 @@ package Archieve.Problems.hard;
 
 public class FirstMissingPositive {
 
-    int firstMissingPositive(int[] nums) {
+    public int firstMissingPositive(int[] nums) {
 
         boolean hasOne = false;
         for (int x : nums) if (x == 1) hasOne = true;

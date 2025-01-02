@@ -1,8 +1,8 @@
 package Archieve.GDub;
 
-import GDublin._2025.common.ListNode;
+import Archieve.GDub.common.ListNode;
 
-class AddTwoNumberLinkedList {
+public class AddTwoNumberLinkedList {
 
     private int getNodeValue(ListNode node) {
         return node != null ? node.val : 0;
