@@ -16,8 +16,6 @@ public class RemoveElement {
             if(nums[idx] != val){ idx++; continue; }
             if(nums[idy] == val){ idy--; continue; }
 
-            if(idx >= idy) break;
-
             // Swap
             int tempSwapValue = nums[idx];
             nums[idx] = nums[idy];
