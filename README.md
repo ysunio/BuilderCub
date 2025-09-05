@@ -1,6 +1,7 @@
 # BuilderCub - Coding Problems Collection
 
-A comprehensive collection of coding problems and solutions organized by data structure and algorithm type.
+A comprehensive collection of coding problems and solutions organized by
+data structure and algorithm type.
 
 ## Project Structure
 
@@ -8,7 +9,8 @@ This project contains **655 Java files** organized into logical categories:
 
 ### Problem Categories
 
-- **Arrays** (206 files) - Array manipulation, matrix operations, searching, sorting
+- **Arrays** (206 files) - Array manipulation, matrix operations, searching,
+  sorting
 - **Strings** (141 files) - String processing, pattern matching, palindromes
 - **Trees** (116 files) - Binary trees, BST, tree traversals, tree algorithms
 - **Linked Lists** (53 files) - List operations, reversals, cycle detection
@@ -24,8 +26,9 @@ This project contains **655 Java files** organized into logical categories:
 ## Sources Consolidated
 
 Problems have been consolidated from multiple platforms:
+
 - LeetCode
-- GeeksForGeeks  
+- GeeksForGeeks
 - AlgoExpert
 - HackerRank
 - Amazon Interview Questions
@@ -37,27 +40,31 @@ Problems have been consolidated from multiple platforms:
 ## Build & Run
 
 ### Prerequisites
+
 - Java 17 or higher
 - Gradle (wrapper included)
 
 ### Building the Project
+
 ```bash
 ./gradlew clean build
 ```
 
 ### Running Tests
+
 ```bash
 ./gradlew test
 ```
 
 ## Package Structure
 
-All problems are organized under `com.buildercub` package with proper categorization:
+All problems are organized under `com.buildercub` package with proper
+categorization:
 
 ```
 problems/src/main/java/com/buildercub/
 ├── arrays/          # Array-based problems
-├── strings/         # String manipulation problems  
+├── strings/         # String manipulation problems
 ├── trees/           # Tree data structure problems
 ├── linkedlists/     # Linked list problems
 ├── math/            # Mathematical problems
@@ -74,7 +81,8 @@ problems/src/main/java/com/buildercub/
 
 - ✅ **Java-only codebase** - No Kotlin dependencies
 - ✅ **Proper package organization** - Logical categorization by algorithm type
-- ✅ **Duplicate removal** - Consolidated similar problems from different sources
+- ✅ **Duplicate removal** - Consolidated similar problems from different
+  sources
 - ✅ **Consistent naming** - Java naming conventions followed
 - ✅ **Gradle build system** - Modern build configuration
 - ✅ **GitHub Actions CI** - Automated build and test pipeline
@@ -82,6 +90,7 @@ problems/src/main/java/com/buildercub/
 ## Contributing
 
 When adding new problems:
+
 1. Place them in the appropriate category package
 2. Follow Java naming conventions
 3. Ensure proper package declarations
@@ -90,6 +99,7 @@ When adding new problems:
 ## CI/CD
 
 The project includes GitHub Actions workflow that:
+
 - Builds the project with Java 21
 - Runs all tests
 - Validates code compilation
