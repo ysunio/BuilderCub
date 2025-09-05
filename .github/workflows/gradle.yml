@@ -10,35 +10,24 @@ permissions:
   contents: read
 
 jobs:
-  build-gradle-project:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout project sources
         uses: actions/checkout@v4.1.2
 
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v3.1.0
 
-      - name: Echo Java Version
-        run: java --version
+      - name: Build all modules
+        run: ./gradlew clean build
 
-      - name: Build LeetCode Module
-        run: cd LeetCode && ./gradlew clean build
-
-      - name: Build Striver Module
-        run: cd Striver && ./gradlew clean build
-      
-      - name: Build Amazon Module
-        run: cd Amazon && ./gradlew clean build
- 
-      - name: Build Grind96 Module
-        run: cd Grind96 && ./gradlew clean build
- 
-      - name: Build GeeksForGeeks Module
-        run: cd GeeksForGeeks && ./gradlew clean build
-
-      - name: Build Interview Module
-        run: cd Interview && ./gradlew clean build
-
-      - name: Build Algoexpert Module
-        run: cd Algoexpert && ./gradlew clean build
+      - name: Run tests
+        run: ./gradlew test
