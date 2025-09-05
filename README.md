@@ -92,9 +92,9 @@ problems/src/main/java/com/buildercub/
 When adding new problems:
 
 1. Place them in the appropriate category package
-2. Follow Java naming conventions
-3. Ensure proper package declarations
-4. Run `./gradlew build` to verify compilation
+1. Follow Java naming conventions
+1. Ensure proper package declarations
+1. Run `./gradlew build` to verify compilation
 
 ## CI/CD
 
